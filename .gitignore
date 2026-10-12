@@ -1,8 +1,15 @@
-venv/ 
-*.csv
+venv/
 __pycache__/
-.ipynb_checkpoints/ 
+.ipynb_checkpoints/
+*.csv
 insurance.ipynb
 insurance_pipeline.ipynb
-*.pkl
 recovered_code.py
+
+# Ignore model artifacts by default
+*.pkl
+
+# Include only the artifacts required by the Streamlit app
+!full_pipeline.pkl
+!num_imputer.pkl
+!preprocessor_pipeline.pkl
